@@ -12,15 +12,15 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
             <!--define intent filters for an activity-->
             <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-                <data android:scheme="http" android:host="developer.android.com" />
+                <action android:name="android.intent.action.VIEW" /> <!--accept any intent with view actions-->
+                <category android:name="android.intent.category.DEFAULT" /> <!--receive any implicit intent-->
+                <category android:name="android.intent.category.BROWSABLE" /> <!--accept intents requests for browsable links from web pages, email etc-->
+                <data android:scheme="http"
+                    android:host="developer.android.com" /> <!--accept URI scheme and specific hostname, if req-->
             </intent-filter>
         </activity>
     </application>
